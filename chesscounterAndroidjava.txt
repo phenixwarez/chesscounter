@@ -1,0 +1,193 @@
+package com.example.android.chesscounter;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    int teamAwin = 0;
+    int teamAloss = 0;
+    int teamAtie = 0;
+    int materialA = 0;
+    int winB = 0;
+    int lossB = 0;
+    int tieB = 0;
+    int materialB = 0;
+
+    /*
+     * display counter for wins , loss , and ties
+     */
+    public void displayForWinTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamAwin);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void displayForLossTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamAloss);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void displayForTieTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamAtie);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void displayForMaterialA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamAmaterial);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /*
+    * display counter for wins , loss , and ties
+    */
+    public void displayForWinTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamBwin);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void displayForLossTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamBloss);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void displayForTieTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamBtie);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void displayForMaterialB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.teamBmaterial);
+        scoreView.setText(String.valueOf(score));
+    }
+    /*
+    * shows material counter Team A
+     */
+
+
+    /**
+     * teamA wins and loss counter
+     */
+    public void winA(View v) {
+        teamAwin = teamAwin + 1;
+        displayForWinTeamA(teamAwin);
+    }
+
+    public void lossA(View v) {
+        teamAloss = teamAloss + 1;
+        displayForLossTeamA(teamAloss);
+    }
+
+    public void tieA(View v) {
+        teamAtie = teamAtie + 1;
+        displayForTieTeamA(teamAtie);
+    }
+
+    /**
+     * teamB wins and loss counter
+     */
+    public void teamBwin(View v) {
+        winB = winB + 1;
+        displayForWinTeamB(winB);
+    }
+
+    public void teamBloss(View v) {
+        lossB = lossB + 1;
+        displayForLossTeamB(lossB);
+    }
+
+    public void teamBtie(View v) {
+        tieB = tieB + 1;
+        displayForTieTeamB(tieB);
+    }
+
+    /**
+     * material A counter pawn1,knight2,bishop2,rook3,queen5
+     */
+    public void pawnA(View v) {
+        materialA = materialA + 1;
+        displayForMaterialA(materialA);
+    }
+
+    public void knightA(View v) {
+        materialA = materialA + 2;
+        displayForMaterialA(materialA);
+    }
+
+    public void bishopA(View v) {
+        materialA = materialA + 2;
+        displayForMaterialA(materialA);
+    }
+
+    public void rookA(View v) {
+        materialA = materialA + 3;
+        displayForMaterialA(materialA);
+    }
+
+    public void queenA(View v) {
+        materialA = materialA + 5;
+        displayForMaterialA(materialA);
+    }
+
+
+    /**
+     * Team B material pieces counter
+     */
+    public void pawnB(View v) {
+        materialB = materialB + 1;
+        displayForMaterialB(materialB);
+    }
+
+    public void knightB(View v) {
+        materialB = materialB + 2;
+        displayForMaterialB(materialB);
+    }
+
+    public void bishopB(View v) {
+        materialB = materialB + 2;
+        displayForMaterialB(materialB);
+    }
+
+    public void rookB(View v) {
+        materialB = materialB + 3;
+        displayForMaterialB(materialB);
+    }
+
+    public void queenB(View v) {
+        materialB = materialB + 5;
+        displayForMaterialB(materialB);
+    }
+
+    public void resetScore(View v) {
+        teamAwin = 0;
+        teamAloss = 0;
+        teamAtie = 0;
+        winB = 0;
+        lossB = 0;
+        tieB = 0;
+        displayForWinTeamA(teamAwin);
+        displayForLossTeamA(teamAloss);
+        displayForTieTeamA(teamAtie);
+        displayForWinTeamB(winB);
+        displayForLossTeamB(lossB);
+        displayForTieTeamB(tieB);
+    }
+
+    public void resetMaterialA(View v) {
+        materialA = 0;
+        displayForMaterialA(materialA);
+    }
+
+    public void resetMaterialB(View v) {
+        materialB = 0;
+        displayForMaterialB(materialB);
+    }
+}
+

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.chesscounter.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 1"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/teamAwin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/teamAloss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/teamAtie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:background="#EF5350"
+                android:onClick="winA"
+                android:text="win" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:background="#EF5350"
+                android:onClick="lossA"
+                android:text="loss" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:background="#EF5350"
+                android:onClick="tieA"
+                android:text="tie" />
+
+            <TextView
+                android:id="@+id/teamAmaterial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="30sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="pawnA"
+                        android:text="P" />
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="knightA"
+                        android:text="N" />
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="bishopA"
+                        android:text="B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="rookA"
+                        android:text="R" />
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="queenA"
+                        android:text="Q" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/resetMaterialA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:onClick="resetMaterialA"
+                    android:layout_gravity="start"
+                    android:text="reset" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 2"
+                android:textSize="32sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/teamBwin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/teamBloss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/teamBtie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/teamBwin"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:background="#EF5350"
+                android:onClick="teamBwin"
+                android:text="win" />
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:background="#EF5350"
+                android:onClick="teamBloss"
+                android:text="loss" />
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_margin="8dp"
+                android:background="#EF5350"
+                android:onClick="teamBtie"
+                android:text="tie" />
+
+            <TextView
+                android:id="@+id/teamBmaterial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textSize="30sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="pawnB"
+                        android:text="P" />
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="knightB"
+                        android:text="N" />
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="bishopB"
+                        android:text="B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_margin="6dp"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#3F51B5"
+                        android:onClick="rookB"
+                        android:text="R" />
+
+                    <Button
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_margin="6dp"
+                        android:background="#3F51B5"
+                        android:onClick="queenB"
+                        android:text="Q" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/resetMaterialB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#3F51B5"
+                    android:onClick="resetMaterialB"
+                    android:layout_gravity="end|bottom"
+                    android:text="reset" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="#EF5350"
+        android:onClick="resetScore"
+        android:text="Reset" />
+
+</RelativeLayout>
